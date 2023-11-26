@@ -1,0 +1,6 @@
+SELECT 
+      Product.[Name] AS ProductName,
+      Category.[Name] AS CategoryName
+  FROM [Products] AS Product
+  LEFT JOIN [ProductCategory] AS ProductCategory ON Product.[ID] = ProductCategory.[ProductID]
+  LEFT JOIN [Category] AS Category ON Category.[ID] = ProductCategory.[CategoryID]
